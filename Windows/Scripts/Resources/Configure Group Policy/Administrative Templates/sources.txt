@@ -1,0 +1,7 @@
+MSS-Legacy, SecGuide: 
+Microsoft Security Compliance Toolkit 1.0
+https://www.microsoft.com/en-us/download/details.aspx?id=55319
+
+firefox, mozilla: 
+Policy Templates for Firefox
+https://github.com/mozilla/policy-templates/releases
