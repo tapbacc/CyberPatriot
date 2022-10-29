@@ -212,7 +212,44 @@ MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace 
 MSS: (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted,Enabled: 3,System\CurrentControlSet\Services\Tcpip6\Parameters,TcpMaxDataRetransmissions,3,DWord,TRUE,,MSS-legacy
 MSS: (TcpMaxDataRetransmissions) How many times unacknowledged data is retransmitted,Enabled: 3,System\CurrentControlSet\Services\Tcpip\Parameters,TcpMaxDataRetransmissions,3,DWord,TRUE,,MSS-legacy
 MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning,Enabled: 90%,System\CurrentControlSet\Services\Eventlog\Security,WarningLevel,90,DWord,TRUE,,MSS-legacy
-Minimum SSL version enabled (Firefox),Enabled: TLS 1.2,Software\Policies\Mozilla\Firefox,SSLVersionMin,tls1.2,String,TRUE,Firefox,firefox
-Extension Update (Firefox),Disabled,Software\Policies\Mozilla\Firefox,ExtensionUpdate,0,DWord,TRUE,Firefox,firefox
-Disable Form History (Firefox),Enabled,Software\Policies\Mozilla\Firefox,DisableFormHistory,1,DWord,TRUE,Firefox,firefox
-Password Manager (Firefox),Disabled,Software\Policies\Mozilla\Firefox,PasswordManagerEnabled,0,DWord,TRUE,Firefox,firefox
+Firefox - Minimum SSL version enabled,Enabled: TLS 1.2,Software\Policies\Mozilla\Firefox,SSLVersionMin,tls1.2,String,TRUE,Firefox,firefox
+Firefox - Extension Update,Disabled,Software\Policies\Mozilla\Firefox,ExtensionUpdate,0,DWord,TRUE,Firefox,firefox
+Firefox - Disable Form History,Enabled,Software\Policies\Mozilla\Firefox,DisableFormHistory,1,DWord,TRUE,Firefox,firefox
+Firefox - Password Manager,Disabled,Software\Policies\Mozilla\Firefox,PasswordManagerEnabled,0,DWord,TRUE,Firefox,firefox
+Firefox - Block pop-ups from websites,Enabled,Software\Policies\Mozilla\Firefox\PopupBlocking,Default,1,DWord,TRUE,Firefox,firefox
+Firefox - Do not allow preferences to be changed (Pop-up blocking),Enabled,Software\Policies\Mozilla\Firefox\PopupBlocking,Locked,1,DWord,TRUE,Firefox,firefox
+Firefox - Allow add-on installs from websites,Disabled,Software\Policies\Mozilla\Firefox\InstallAddonsPermission,Default,0,DWord,TRUE,Firefox,firefox
+Firefox - Disable Telemetry,Enabled,Software\Policies\Mozilla\Firefox,DisableTelemetry,1,DWord,TRUE,Firefox,firefox
+Firefox - Disable Developer Tools,Enabled,Software\Policies\Mozilla\Firefox,DisableDeveloperTools,1,DWord,TRUE,Firefox,firefox
+Firefox - Disable Forget Button,Enabled,Software\Policies\Mozilla\Firefox,DisableForgetButton,1,DWord,TRUE,Firefox,firefox
+Firefox - Disable Private Browsing,Enabled,Software\Policies\Mozilla\Firefox,DisablePrivateBrowsing,1,DWord,TRUE,Firefox,firefox
+Firefox - Search Suggestions,Disabled,Software\Policies\Mozilla\Firefox,SearchSuggestEnabled,0,DWord,TRUE,Firefox,firefox
+Firefox - Default autoplay level,Enabled: Block Audio and Video,Software\Policies\Mozilla\Firefox\Permissions\Autoplay,Default,block-audio-video,String,TRUE,Firefox,firefox
+Firefox - Do not allow preferences to be changed (Autoplay),Enabled,Software\Policies\Mozilla\Firefox\Permissions\Autoplay,Locked,1,DWord,TRUE,Firefox,firefox
+Firefox - Network Prediction,Disabled,Software\Policies\Mozilla\Firefox,NetworkPrediction,0,DWord,TRUE,Firefox,firefox
+Firefox - Fingerprinting (Protection),Enabled,Software\Policies\Mozilla\Firefox\EnableTrackingProtection,Fingerprinting,1,DWord,TRUE,Firefox,firefox
+Firefox - Cryptomining (Protection),Enabled,Software\Policies\Mozilla\Firefox\EnableTrackingProtection,Cryptomining,1,DWord,TRUE,Firefox,firefox
+Firefox - TLS_RSA_WITH_3DES_EDE_CBC_SHA,Enabled,Software\Policies\Mozilla\Firefox\DisabledCiphers,TLS_RSA_WITH_3DES_EDE_CBC_SHA,1,DWord,TRUE,Firefox,firefox
+Firefox - Extension Recommendations,Disabled,Software\Policies\Mozilla\Firefox\UserMessaging,ExtensionRecommendations,0,DWord,TRUE,Firefox,firefox
+Firefox - Customize Firefox Home (Search),Disabled,Software\Policies\Mozilla\Firefox\FirefoxHome,Search,0,DWord,TRUE,Firefox,firefox
+Firefox - Customize Firefox Home (Top Sites),Disabled,Software\Policies\Mozilla\Firefox\FirefoxHome,TopSites,0,DWord,TRUE,Firefox,firefox
+Firefox - Customize Firefox Home (Sponsored Top Sites),Disabled,Software\Policies\Mozilla\Firefox\FirefoxHome,SponsoredTopSites,0,DWord,TRUE,Firefox,firefox
+Firefox - Customize Firefox Home (Recommended by Pocket),Disabled,Software\Policies\Mozilla\Firefox\FirefoxHome,Pocket,0,DWord,TRUE,Firefox,firefox
+Firefox - Customize Firefox Home (Sponsored Pocket Stories),Disabled,Software\Policies\Mozilla\Firefox\FirefoxHome,SponsoredPocket,0,DWord,TRUE,Firefox,firefox
+Firefox - Customize Firefox Home (Download History),Disabled,Software\Policies\Mozilla\Firefox\FirefoxHome,Highlights,0,DWord,TRUE,Firefox,firefox
+Firefox - Customize Firefox Home (Snippets),Disabled,Software\Policies\Mozilla\Firefox\FirefoxHome,Snippets,0,DWord,TRUE,Firefox,firefox
+Firefox - Customize Firefox Home (Do not allow settings to be changed),Enabled,Software\Policies\Mozilla\Firefox\FirefoxHome,Locked,1,DWord,TRUE,Firefox,firefox
+Firefox - Enabled (DNS over HTTPS),Disabled,Software\Policies\Mozilla\Firefox\DNSOverHTTPS,Enabled,0,DWord,TRUE,Firefox,firefox
+Firefox - Disable Firefox Accounts,Enabled,Software\Policies\Mozilla\Firefox,DisableFirefoxAccounts,1,DWord,TRUE,Firefox,firefox
+Firefox - Disable Feedback Commands,Enabled,Software\Policies\Mozilla\Firefox,DisableFeedbackCommands,1,DWord,TRUE,Firefox,firefox
+Firefox - Enable Encrypted Media Extensions,Disabled,Software\Policies\Mozilla\Firefox\EncryptedMediaExtensions,Enabled,0,Dword,TRUE,Firefox,firefox
+Firefox - Lock Encrypted Media Extensions,Enabled,Software\Policies\Mozilla\Firefox\EncryptedMediaExtensions,Locked,1,DWord,TRUE,Firefox,firefox
+Firefox - Cache (Clear data when the browser is closed),Disabled,Software\Policies\Mozilla\Firefox\SanitizeOnShutdown,Cache,0,DWord,TRUE,Firefox,firefox
+Firefox - Cookies (Clear data when the browser is closed),Disabled,Software\Policies\Mozilla\Firefox\SanitizeOnShutdown,Cookies,0,DWord,TRUE,Firefox,firefox
+Firefox - Download History (Clear data when the browser is closed),Disabled,Software\Policies\Mozilla\Firefox\SanitizeOnShutdown,Downloads,0,DWord,TRUE,Firefox,firefox
+Firefox - Form & Search History (Clear data when the browser is closed),Disabled,Software\Policies\Mozilla\Firefox\SanitizeOnShutdown,FormData,0,DWord,TRUE,Firefox,firefox
+Firefox - Browsing History (Clear data when the browser is closed),Disabled,Software\Policies\Mozilla\Firefox\SanitizeOnShutdown,History,0,DWord,TRUE,Firefox,firefox
+Firefox - Active Logins (Clear data when the browser is closed),Disabled,Software\Policies\Mozilla\Firefox\SanitizeOnShutdown,Sessions,0,DWord,TRUE,Firefox,firefox
+Firefox - Site Preferences (Clear data when the browser is closed),Disabled,Software\Policies\Mozilla\Firefox\SanitizeOnShutdown,SiteSettings,0,DWord,TRUE,Firefox,firefox
+Firefox - Offline Website Data (Clear data when the browser is closed),Disabled,Software\Policies\Mozilla\Firefox\SanitizeOnShutdown,OfflineApps,0,DWord,TRUE,Firefox,firefox
+Firefox - Locked (Clear data when the browser is closed),Enabled,Software\Policies\Mozilla\Firefox\SanitizeOnShutdown,Locked,1,DWord,TRUE,Firefox,firefox
