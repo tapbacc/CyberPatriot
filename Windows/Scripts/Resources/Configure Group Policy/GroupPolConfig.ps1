@@ -17,7 +17,8 @@ if((Read-Host -Prompt "`nSecure Microsoft Edge? (y/n)") -eq "y") {
 Clear-Host
 
 #Import the GroupPolicies.csv file into a variable
-$pols = Import-Csv -Path (($PSCommandPath | Split-path -Parent) + '\GroupPolicies.csv')
+#$pols = Import-Csv -Path (($PSCommandPath | Split-path -Parent) + '\GroupPolicies.csv')
+$pols = Import-Csv -Path "$($PSScriptRoot)\GroupPolicies.csv"
 
 #Copy over required .admx and .adml files
 foreach ($pol in $pols) {
@@ -70,7 +71,8 @@ $polPath = "$($env:SystemRoot)\System32\GroupPolicy\Machine\registry.pol"
 
 #Create a backup of the current computer configuration policy file
 try {
-$backupPath = "$($PSScriptRoot)\Backups\Registry($(Get-Date -Format "HH-mm-ss")).pol"
+    $backupPath = "$($PSScriptRoot)\Backups\Registry($(Get-Date -Format "HH-mm-ss")).pol"
+    New-Item -ItemType Directory -Force -Path ($backupPath | Split-Path -Parent) | Out-Null
     Copy-Item $polPath $backupPath -ErrorAction Stop
     Write-Output "Created a backup of the policy file at $($backupPath)"
 } catch {
