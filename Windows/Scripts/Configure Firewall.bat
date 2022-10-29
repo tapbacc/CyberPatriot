@@ -10,4 +10,4 @@ if not %errorlevel% == 0 (
 )
 
 ::Run the Powershell Script to Edit Firewall Settings With Admin Rights
-PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%~dp0\FirewallConfig.ps1""' -Verb RunAs}"
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%~dp0\Resources\Configure Firewall\FirewallConfig.ps1""' -Verb RunAs}"

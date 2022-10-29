@@ -8,10 +8,10 @@
 ::dnscache			::DNS Client
 ::eventlog			::Windows Event Log
 ::mpssvc			::Windows Firewall
-::trustedinstaller		::Windows Modules Installer
 ::List End
 
 ::List Manual Services:
+::trustedinstaller		::Windows Modules Installer
 ::wuauserv			::Windows Update
 ::List End
 

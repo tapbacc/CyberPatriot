@@ -10,6 +10,6 @@ if not %errorlevel% == 0 (
 )
 
 ::Configure Security Policy From Template
-secedit /configure /db c:\windows\security\local.sdb /cfg "%~dp0Win10Secure.inf"
+secedit /configure /db c:\windows\security\local.sdb /cfg "%~dp0\Resources\Configure Security Policy\Win10Secure.inf"
 
 pause
