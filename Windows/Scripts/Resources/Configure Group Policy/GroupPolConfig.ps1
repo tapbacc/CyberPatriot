@@ -1,6 +1,7 @@
-#Record the list of installed services from user input
-$services =@()
+#List of services to be configured
+$services =@('WinUpdate', 'WinDefender', 'EventLog', 'Powershell', 'WinRM', 'SMBv1')
 
+#Add to the list of installed services from user input
 if((Read-Host -Prompt "Secure Firefox? (y/n)") -eq "y") {
     $services = $services + 'Firefox'
 }
@@ -88,9 +89,15 @@ Install-Module -Name PolicyFileEditor -Force
 
 #Go through each row in the array of group policy changes and apply them
 foreach ($pol in $pols) {
+    #Only edit the policy if it is enabled in the csv and is for a service that needs to be configured
     if(($pol.Enabled -eq 'TRUE') -and (($pol.Service -eq '') -or ($services -contains $pol.Service))) {
-        Set-PolicyFileEntry -Path $polPath -Key $pol.Key -ValueName $pol.Value -Data $pol.Data -Type $pol.Type
-        Write-Output "$($pol.Name) is now set to $($pol.Setting)"
+        #Opional data type "Remove" will tell the program to delete the setting (set it to not configured)
+        if($pol.Type -eq 'Remove') {
+            Remove-PolicyFileEntry -Path $polPath -Key $pol.Key -ValueName $pol.Value
+        } else {
+            Set-PolicyFileEntry -Path $polPath -Key $pol.Key -ValueName $pol.Value -Data $pol.Data -Type $pol.Type
+        }
+        Write-Output "$($pol.Service) - $($pol.Name) is now set to $($pol.Setting)"
     }
 }
 
