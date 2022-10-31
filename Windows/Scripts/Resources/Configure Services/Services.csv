@@ -1,0 +1,55 @@
+Name,Process,Mode
+Base Filtering Engine,bfe,Automatic
+DHCP Client,dhcp,Automatic
+DNS Client,dnscache,Automatic
+File Replication Service,ntfrs,Automatic
+Intersite Messaging Service,ismserv,Automatic
+Kerberos Key Distribution Center Service,kdc,Automatic
+Windows Event Log,eventlog,Automatic
+Windows Firewall,mpssvc,Automatic
+Windows Modules Installer,trustedinstaller,Manual
+Windows Time,w32time,Manual
+Windows Update,wuauserv,Manual
+Bluetooth Audio Gateway Service,btagservice,Disabled
+Bluetooth Support Service,bthserv,Disabled
+Computer Browser,browser,Disabled
+Downloaded Maps Manager,mapsbroker,Disabled
+Geolocation Service,lfsvc,Disabled
+IIS Admin Service,iisadmin,Disabled
+Infrared Monitor Service,irmon,Disabled
+Internet Connection Sharing (ICS),sharedaccess,Disabled
+IP Helper,iphlpsvc,Disabled
+Link-Layer Topology Discovery Mapper,lltdsvc,Disabled
+LxssManager,lxssmanager,Disabled
+Microsoft FTP Service,ftpsvc,Disabled
+Microsoft iSCSI Initiator Service,msiscsi,Disabled
+Microsoft Store Install Service,installservice,Disabled
+Net.Tcp Port Sharing Service,nettcpportsharing,Disabled
+OpenSSH SSH Server,sshd,Disabled
+Peer Name Resolution Protocol,pnrpsvc,Disabled
+Peer Networking Grouping,p2psvc,Disabled
+Peer Networking Identity Manager,p2pimsvc,Disabled
+PNRP Machine Name Publication Service,pnrpautoreg,Disabled
+Problem Reports and Solutions Control Panel Support,wercplsupport,Disabled
+Remote Access Auto Connection Manager,rasauto,Disabled
+Remote Procedure Call (RPC) Locator,rpclocator,Disabled
+Remote Registry,remoteregistry,Disabled
+Routing and Remote Access,remoteaccess,Disabled
+Secondary Logon,seclogon,Disabled
+Simple TCP/IP Services,simptcp,Disabled
+SNMP Service,snmp,Disabled
+SSDP Discovery,ssdpsrv,Disabled
+UPnP Device Host,upnphost,Disabled
+Web Management Service,wmsvc,Disabled
+Windows Error Reporting Service,wersvc,Disabled
+Windows Event Collector,wecsvc,Disabled
+Windows Media Player Network Sharing Service,wmpnetworksvc,Disabled
+Windows Mobile Hotspot Service,icssvc,Disabled
+Windows Push Notifications System Service,wpnservice,Disabled
+Windows PushToInstall Service,pushtoinstall,Disabled
+Windows Remote Management (WS-Management),winrm,Disabled
+World Wide Web Publishing Service,w3svc,Disabled
+Xbox Accessory Management Service,xboxgipsvc,Disabled
+Xbox Live Auth Manager,xblauthmanager,Disabled
+Xbox Live Game Save,xblgamesave,Disabled
+Xbox Live Networking Services,xboxnetapisvc,Disabled

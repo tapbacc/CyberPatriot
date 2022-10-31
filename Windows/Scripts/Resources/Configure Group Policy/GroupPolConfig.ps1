@@ -18,7 +18,6 @@ if((Read-Host -Prompt "`nSecure Microsoft Edge? (y/n)") -eq "y") {
 Clear-Host
 
 #Import the GroupPolicies.csv file into a variable
-#$pols = Import-Csv -Path (($PSCommandPath | Split-path -Parent) + '\GroupPolicies.csv')
 $pols = Import-Csv -Path "$($PSScriptRoot)\GroupPolicies.csv"
 
 #Copy over required .admx and .adml files
