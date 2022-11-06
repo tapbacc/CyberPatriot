@@ -10,4 +10,4 @@ if not %errorlevel% == 0 (
 )
 
 ::Run the Powershell Script to Edit All of the Policies With Admin Rights
-PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%~dp0\Resources\Configure Security Policy And Users\ConfigSecPolUsers.ps1""' -Verb RunAs}"
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%~dp0\Resources\Configure Security Policy And Passwords\ConfigSecPolPasswords.ps1""' -Verb RunAs}"

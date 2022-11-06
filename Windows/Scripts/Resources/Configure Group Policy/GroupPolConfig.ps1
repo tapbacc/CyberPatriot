@@ -1,21 +1,12 @@
 #List of services to be configured
-$services =@('WinUpdate', 'WinDefender', 'EventLog', 'Powershell', 'WinRM', 'SMBv1')
+$services =@('WinUpdate', 'WinDefender', 'EventLog', 'Powershell', 'WinRM', 'SMBv1','Firefox','Chrome','IExplorer','MSEdge','RDP')
 
-#Add to the list of installed services from user input
-if((Read-Host -Prompt "Secure Firefox? (y/n)") -eq "y") {
-    $services = $services + 'Firefox'
+#Add to the list of services from user input
+if((Read-Host -Prompt "Enable remote desktop? (y/n)") -eq "y") {
+    $services = $services + 'RDPOn'
+} else {
+    $services = $services + 'RDPOff'
 }
-if((Read-Host -Prompt "`nSecure Chrome? (y/n)") -eq "y") {
-    $services = $services + 'Chrome'
-}
-if((Read-Host -Prompt "`nSecure Internet Explorer? (y/n)") -eq "y") {
-    $services = $services + 'IExplorer'
-}
-if((Read-Host -Prompt "`nSecure Microsoft Edge? (y/n)") -eq "y") {
-    $services = $services + 'MSEdge'
-}
-
-Clear-Host
 
 #Import the GroupPolicies.csv file into a variable
 $pols = Import-Csv -Path "$($PSScriptRoot)\GroupPolicies.csv"
@@ -49,23 +40,6 @@ foreach ($pol in $pols) {
     }
 }
 
-<#
-#skipped pages:
-498-499: Win 11
-526: No template built into Windows
-558-571: NG / BitLocker
-573-584: Bitlocker
-628-627: Bitlocker
-650-653: Bitlocker
-705-796: BitLocker
-799: Win 11
-821-823: Win 11
-878-882: Niche and time consuming, probably not applicable to cyberpatriot
-912-925: NG / BitLocker
-1079-1081: Not applicable to cyberpatriot
-1085-1090: Not applicable to cyberpatriot (screensaver)
-#>
-
 #Set the path to the policy file that will be edited by the script
 $polPath = "$($env:SystemRoot)\System32\GroupPolicy\Machine\registry.pol"
 
@@ -84,6 +58,7 @@ try {
 #Install PolicyFileEditor to enable manipulation of the pol file using scripts
 #For some reason Tls1.2 specifically is required to install the module
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+Install-PackageProvider -Name NuGet -Force | Out-Null
 Install-Module -Name PolicyFileEditor -Force
 
 #Go through each row in the array of group policy changes and apply them

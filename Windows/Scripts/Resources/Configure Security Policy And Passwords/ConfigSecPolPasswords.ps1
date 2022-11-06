@@ -13,6 +13,7 @@ foreach ($user in $users) {
 
 Write-Host "`nChanged password to Cyb3rPatri0t! and configured password settings for all users (other than you)"
 
+<#
 Write-Host "`nList of current users and groups:"
 $ignored = 'DefaultAccount', 'RenamedAdm', 'RenamedGue', 'WDAGUtilityAccount', $env:UserName
 foreach ($user in $users) {
@@ -23,6 +24,7 @@ foreach ($user in $users) {
     Write-Host "`n$($user.Name)"
     net user $user.Name | select-string 'Local Group Memberships'
 }
+#>
     
 
 cmd /c pause
