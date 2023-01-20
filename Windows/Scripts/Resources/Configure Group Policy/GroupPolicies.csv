@@ -286,3 +286,17 @@ MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace 
 MSS: (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted,Enabled: 3,System\CurrentControlSet\Services\Tcpip6\Parameters,TcpMaxDataRetransmissions,DWord,3,TRUE,,MSS-legacy
 MSS: (TcpMaxDataRetransmissions) How many times unacknowledged data is retransmitted,Enabled: 3,System\CurrentControlSet\Services\Tcpip\Parameters,TcpMaxDataRetransmissions,DWord,3,TRUE,,MSS-legacy
 MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning,Enabled: 90%,System\CurrentControlSet\Services\Eventlog\Security,WarningLevel,DWord,90,TRUE,,MSS-legacy
+Hide the Account protection area,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\Account protection,UILockdown,DWord,0,TRUE,WinDefender,
+Hide the App and browser protection area,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\App and Browser protection,UILockdown,DWord,0,TRUE,WinDefender,
+Hide the Virus and threat protection area,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\Virus and threat protection,UILockdown,DWord,0,TRUE,WinDefender,
+Disable the client user interface,Disabled,Software\Policies\Microsoft\Microsoft Antimalware\UX Configuration,UILockdown,DWord,0,TRUE,WinDefender,
+Hide the Family options area,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\Family options,UILockdown,DWord,0,TRUE,WinDefender,
+Hide the Ransomware data recovery area,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\Virus and threat protection,HideRansomwareRecovery,DWord,0,TRUE,WinDefender,
+Hide the Firewall and network protection area,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\Firewall and network protection,UILockdown,DWord,0,TRUE,WinDefender,
+Hide the TPM Firmware Update recommendation.,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\Device security,DisableTpmFirmwareUpdateWarning,DWord,0,TRUE,WinDefender,
+Disable the Clear TPM button,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\Device security,DisableClearTpmButton,DWord,0,TRUE,WinDefender,
+Hide the Secure boot area,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\Device security,HideSecureBoot,DWord,0,TRUE,WinDefender,
+Hide the Security processor (TPM) troubleshooter page,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\Device security,HideTPMTroubleshooting,DWord,0,TRUE,WinDefender,
+Hide the Device security area,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\Device security,UILockdown,DWord,0,TRUE,WinDefender,
+Hide the Device performance and health area,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\Device performance and health,UILockdown,DWord,0,TRUE,WinDefender,
+Prevent users from modifying settings,Disabled,Software\Policies\Microsoft\Windows Defender Security Center\App and Browser protection,DisallowExploitProtectionOverride,DWord,0,TRUE,WinDefender,

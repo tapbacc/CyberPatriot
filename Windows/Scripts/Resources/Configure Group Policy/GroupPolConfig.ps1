@@ -40,20 +40,20 @@ foreach ($pol in $pols) {
     }
 }
 
-#Set the path to the policy file that will be edited by the script
-$polPath = "$($env:SystemRoot)\System32\GroupPolicy\Machine\registry.pol"
-
-#Create a backup of the current computer configuration policy file
+#Create a backup of entire group policy
 try {
-    $backupPath = "$($PSScriptRoot)\Backups\Registry($(Get-Date -Format "HH-mm-ss")).pol"
+    $backupPath = "$($PSScriptRoot)\Backups\Group Policy($(Get-Date -Format "HH-mm-ss"))"
     New-Item -ItemType Directory -Force -Path ($backupPath | Split-Path -Parent) | Out-Null
-    Copy-Item $polPath $backupPath -ErrorAction Stop
-    Write-Output "Created a backup of the policy file at $($backupPath)"
+    Copy-Item -Path "$($env:SystemRoot)\System32\GroupPolicy" -Destination $backupPath -Recurse -ErrorAction Stop
+    Write-Output "Created a backup of the entire Group Policy directory at $($backupPath)"
 } catch {
     Write-Output "Failed to create a backup of the policy file. The script will not continue."
     cmd /c pause
     exit
 }
+
+#Set the path to the policy file that will be edited by the script
+$polPath = "$($env:SystemRoot)\System32\GroupPolicy\Machine\registry.pol"
 
 #Install PolicyFileEditor to enable manipulation of the pol file using scripts
 #For some reason Tls1.2 specifically is required to install the module
